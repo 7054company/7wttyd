@@ -1,0 +1,14 @@
+[Unit]
+Description=7w + ttyd 
+After=network.target
+
+[Service] 
+
+Restart=on-failure
+RestartSec=5s
+ExecStart=/bin/7ea/7w -c 7ea:root -p 8075 /bin/7ea/bash 
+
+
+
+[Install]
+WantedBy=multi-user.target
